@@ -11,7 +11,10 @@ should return [{name: "Jane", age: 20, isAdult: true}]
 
 function filterAndMap(arr) {
     //Write your code here.
-    return result;
+    let filteredData = arr
+    .filter(item => item.age >= 18)
+    .map(item => ({ ...item, isAdult: true }));
+    return filteredData;
 }
 
 module.exports = { filterAndMap };
